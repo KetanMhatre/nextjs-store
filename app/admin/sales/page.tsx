@@ -30,9 +30,9 @@ async function SalesPage() {
         <TableBody>
           {orders.map((order) => {
             const { products, orderTotal, tax, shipping, createdAt, email } =
-              order
+              order;
             return (
-              <TableRow>
+              <TableRow key={order.id}>
                 <TableCell>{email}</TableCell>
                 <TableCell>{products}</TableCell>
                 <TableCell>{formatCurrency(orderTotal)}</TableCell>
